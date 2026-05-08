@@ -86,18 +86,13 @@ export default function RegisterPage() {
           display: 'none', width: '50%',
           flexDirection: 'column', justifyContent: 'space-between',
           padding: '48px',
-          background: 'linear-gradient(160deg, #0c4a6e 0%, #0369a1 50%, #0ea5e9 100%)',
+          backgroundImage: 'url(/pantai-bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           position: 'relative', overflow: 'hidden',
         }}>
-        <div style={{ position: 'absolute', inset: 0, animation: '_pulse 4s ease-in-out infinite' }}>
-          <svg viewBox="0 0 800 800" style={{ width: '100%', height: '100%' }}>
-            <circle cx="400" cy="400" r="300" fill="none" stroke="white" strokeWidth="80"/>
-            <circle cx="400" cy="400" r="180" fill="none" stroke="white" strokeWidth="60"/>
-            <circle cx="400" cy="400" r="80" fill="white"/>
-          </svg>
-        </div>
-        <div style={{ position: 'absolute', top: '25%', right: '12%', width: '80px', height: '80px', borderRadius: '50%', background: 'rgba(255,255,255,0.05)', animation: '_float 7s ease-in-out infinite' }}/>
-        <div style={{ position: 'absolute', bottom: '20%', left: '8%', width: '50px', height: '50px', borderRadius: '50%', background: 'rgba(255,255,255,0.04)', animation: '_float 5s ease-in-out infinite 1s' }}/>
+        {/* Dark overlay for readability */}
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(160deg, rgba(12,74,110,0.55) 0%, rgba(3,105,161,0.35) 50%, rgba(14,165,233,0.2) 100%)' }}/>
 
         <div style={{ position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: '10px', animation: '_slideRight 0.6s ease both' }}>
           <div style={{ width: '32px', height: '32px', borderRadius: '10px', background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(8px)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>

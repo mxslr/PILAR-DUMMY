@@ -1,4 +1,5 @@
 'use client';
+// PBI #39 - Naufal Athalino - Detail Laporan Event (peserta hadir, sampah terkumpul, galeri dokumentasi)
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { DashboardLayout } from '@/components/layout/Sidebar';

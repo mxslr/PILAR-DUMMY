@@ -18,6 +18,7 @@ export class DokumentasiService {
     });
   }
 
+  // PBI #32 - Feyza Adyani - Upload Foto Dokumentasi Kegiatan oleh Admin
   // Upload oleh admin — tidak perlu cek pendaftaran
   async createAdmin(eventId: string, userId: string, fotoUrl: string, caption?: string) {
     const event = await this.prisma.event.findUnique({ where: { id: eventId } });
@@ -35,6 +36,7 @@ export class DokumentasiService {
     });
   }
 
+  // PBI #33 - Feyza Adyani - Hapus Foto Dokumentasi dari Galeri Admin
   async delete(id: string, userId: string) {
     const dok = await this.prisma.dokumentasi.findUnique({ where: { id } });
     if (!dok) throw new NotFoundException('Tidak ditemukan');

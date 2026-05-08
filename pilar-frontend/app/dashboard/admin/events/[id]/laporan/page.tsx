@@ -37,6 +37,7 @@ export default function AdminLaporanEventPage() {
     } catch { router.push('/dashboard/admin'); }
   };
 
+  // PBI #31 - Feyza Adyani - Form Input Data Sampah Per Event
   const handleAddSampah = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!sampahForm.jumlahKg || Number(sampahForm.jumlahKg) <= 0) {
@@ -57,6 +58,7 @@ export default function AdminLaporanEventPage() {
     finally { setSavingSampah(false); }
   };
 
+  // PBI #31 - Feyza Adyani - Form Input Data Sampah Per Event (hapus entri)
   const handleDeleteSampah = async (id: string) => {
     try {
       await api.delete(`/sampah/${id}`);
@@ -71,6 +73,7 @@ export default function AdminLaporanEventPage() {
     setPreviews(urls);
   };
 
+  // PBI #32 - Feyza Adyani - Upload Foto Dokumentasi Kegiatan oleh Admin
   const handleUploadDok = async () => {
     const files = fileRef.current?.files;
     if (!files || files.length === 0) { toast.error('Pilih foto terlebih dahulu'); return; }
@@ -94,6 +97,7 @@ export default function AdminLaporanEventPage() {
     finally { setUploading(false); }
   };
 
+  // PBI #33 - Feyza Adyani - Hapus Foto Dokumentasi dari Galeri Admin
   const handleDeleteDok = async (id: string) => {
     try {
       await api.delete(`/dokumentasi/${id}`);
@@ -114,6 +118,7 @@ export default function AdminLaporanEventPage() {
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
 
+          {/* PBI #31 - Feyza Adyani - Form Input Data Sampah Per Event */}
           {/* Kiri — Input Sampah */}
           <div>
             <div style={{ background: '#fff', borderRadius: '16px', border: '1px solid #f5f0e8', padding: '20px', marginBottom: '16px' }}>
@@ -168,6 +173,8 @@ export default function AdminLaporanEventPage() {
             </div>
           </div>
 
+          {/* PBI #32 - Feyza Adyani - Upload Foto Dokumentasi Kegiatan */}
+          {/* PBI #33 - Feyza Adyani - Hapus Foto Dokumentasi dari Galeri */}
           {/* Kanan — Upload Dokumentasi */}
           <div>
             <div style={{ background: '#fff', borderRadius: '16px', border: '1px solid #f5f0e8', padding: '20px', marginBottom: '16px' }}>

@@ -1,4 +1,5 @@
 'use client';
+// PBI #35 - Marshall Rasendria - Hub Manajemen Relawan Admin (Daftar Event + Link ke Peserta)
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { DashboardLayout } from '@/components/layout/Sidebar';

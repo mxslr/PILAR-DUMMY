@@ -29,11 +29,15 @@ export class UsersController {
     return this.usersService.updateProfile(req.user.id, dto);
   }
 
+  // PBI #27 - M. Haiqal Akbar - Statistik Kontribusi Relawan di Halaman Profil
   @UseGuards(JwtAuthGuard)
   @Get('stats')
   getStats(@Request() req) {
     return this.usersService.getStats(req.user.id);
   }
+
+  // PBI #25 - M. Haiqal Akbar - Fungsionalitas Hapus Akun Relawan
+  // Tambahkan endpoint DELETE /users/profile di sini — panggil usersService.deleteAccount(req.user.id)
 
   // --- TAMBAHAN BARU: Endpoint Ganti Password ---
   @UseGuards(JwtAuthGuard)

@@ -96,22 +96,14 @@ export default function LoginPage() {
           display: 'none', width: '50%',
           flexDirection: 'column', justifyContent: 'space-between',
           padding: '48px',
-          background: 'linear-gradient(160deg,#0c4a6e 0%,#0369a1 55%,#0ea5e9 100%)',
+          backgroundImage: 'url(/pantai-bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           position: 'relative', overflow: 'hidden',
         }}
       >
-        {/* Animated decoration */}
-        <div style={{ position:'absolute', inset:0, animation: '_pulse 4s ease-in-out infinite' }}>
-          <svg viewBox="0 0 600 600" style={{ width:'100%', height:'100%' }}>
-            <circle cx="300" cy="300" r="250" fill="none" stroke="white" strokeWidth="60"/>
-            <circle cx="300" cy="300" r="150" fill="none" stroke="white" strokeWidth="40"/>
-            <circle cx="300" cy="300" r="60"  fill="white"/>
-          </svg>
-        </div>
-
-        {/* Floating orbs */}
-        <div style={{ position: 'absolute', top: '20%', right: '15%', width: '100px', height: '100px', borderRadius: '50%', background: 'rgba(255,255,255,0.05)', animation: '_float 6s ease-in-out infinite' }}/>
-        <div style={{ position: 'absolute', bottom: '30%', left: '10%', width: '60px', height: '60px', borderRadius: '50%', background: 'rgba(255,255,255,0.04)', animation: '_float 8s ease-in-out infinite 1s' }}/>
+        {/* Dark overlay for readability */}
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(160deg, rgba(12,74,110,0.55) 0%, rgba(3,105,161,0.35) 55%, rgba(14,165,233,0.2) 100%)' }}/>
 
         {/* Logo */}
         <div style={{ position:'relative', zIndex:1, display:'flex', alignItems:'center', gap:'10px', animation: '_slideRight 0.6s ease both' }}>

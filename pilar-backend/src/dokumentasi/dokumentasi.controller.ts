@@ -46,6 +46,7 @@ export class DokumentasiController {
     return this.dokumentasiService.create(eventId, req.user.id, fotoUrl, caption);
   }
 
+  // PBI #32 - Feyza Adyani - Upload Foto Dokumentasi Kegiatan oleh Admin
   // Upload foto oleh admin untuk event apapun
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(Role.ADMIN)
@@ -78,6 +79,7 @@ export class DokumentasiController {
     return this.dokumentasiService.getByEvent(eventId);
   }
 
+  // PBI #33 - Feyza Adyani - Hapus Foto Dokumentasi dari Galeri Admin
   @UseGuards(JwtAuthGuard)
   @Delete(':id')
   delete(@Param('id') id: string, @Request() req) {

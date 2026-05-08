@@ -9,6 +9,8 @@ import { Role } from '@prisma/client';
 export class SertifikatController {
   constructor(private sertifikatService: SertifikatService) {}
 
+  // PBI #29 - Syifa Rizani - Generate dan Unduh Sertifikat PDF
+  // PBI #34 - Marshall Rasendria - Generate Sertifikat Otomatis Saat Pendaftaran Disetujui
   // User generate sertifikat miliknya
   @UseGuards(JwtAuthGuard)
   @Post('generate/:pendaftaranId')
@@ -19,6 +21,7 @@ export class SertifikatController {
     return this.sertifikatService.generate(pendaftaranId, req.user.id);
   }
 
+  // PBI #28 - Syifa Rizani - Daftar Sertifikat Relawan
   // User lihat semua sertifikat miliknya
   @UseGuards(JwtAuthGuard)
   @Get('my')
@@ -33,6 +36,7 @@ export class SertifikatController {
     return this.sertifikatService.getById(id);
   }
 
+  // PBI #36 - Marshall Rasendria - Verifikasi Sertifikat Publik Berdasarkan Nomor Sertifikat
   // Verifikasi sertifikat publik by nomor (tanpa login)
   @Get('verifikasi/:nomor')
   getByNomor(@Param('nomor') nomor: string) {

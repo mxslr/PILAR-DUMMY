@@ -66,6 +66,8 @@ export class EventsService {
     return { message: 'Event berhasil dihapus' };
   }
 
+  // PBI #22 - Muhammad Faris Alfaqih - Statistik Sampah Terpilah Dashboard Admin
+  // PBI #40 - Naufal Athalino - Integrasi Data Monitoring ke Dashboard
   // Statistik dashboard
   async getStats() {
     const [totalEvent, totalRelawan, sampahData] = await Promise.all([

@@ -27,6 +27,7 @@ export default function SettingsPage() {
     } finally { setLoading(false); }
   };
 
+  // PBI #25 - M. Haiqal Akbar - Fungsionalitas Hapus Akun Relawan
   const handleHapusAkun = () => {
     if (!confirm('Yakin ingin menghapus akun? Tindakan ini tidak bisa dibatalkan.')) return;
     toast.error('Fitur hapus akun belum tersedia. Hubungi admin.');
@@ -88,6 +89,7 @@ export default function SettingsPage() {
           </form>
         </div>
 
+        {/* PBI #26 - M. Haiqal Akbar - Integrasi Toggle Notifikasi Email ke Backend */}
         {/* Notifikasi */}
         <div className="set-section" style={{ background: '#fff', borderRadius: '20px', border: '1px solid rgba(14,165,233,0.06)', padding: '28px', marginBottom: '16px', boxShadow: '0 4px 20px rgba(0,0,0,0.02)', animation: '_setFade 0.5s ease 0.2s both' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '22px' }}>
@@ -112,6 +114,7 @@ export default function SettingsPage() {
           ))}
         </div>
 
+        {/* PBI #25 - M. Haiqal Akbar - Fungsionalitas Hapus Akun Relawan */}
         {/* Zona Bahaya */}
         <div className="set-section" style={{ background: '#fff', borderRadius: '20px', border: '1px solid rgba(220,38,38,0.08)', padding: '28px', boxShadow: '0 4px 20px rgba(0,0,0,0.02)', animation: '_setFade 0.5s ease 0.3s both' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '18px' }}>

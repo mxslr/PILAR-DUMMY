@@ -70,12 +70,7 @@ export default function Sidebar() {
 
       {/* Logo */}
       <Link href="/" style={{ textDecoration: 'none', padding: '26px 22px 20px', borderBottom: '1px solid rgba(14,165,233,0.06)', display: 'flex', alignItems: 'center', gap: '11px', animation: '_sidebarFadeIn 0.4s ease both' }}>
-        <div style={{ width: '32px', height: '32px', borderRadius: '10px', background: 'linear-gradient(135deg,#0ea5e9,#0369a1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: '0 4px 12px rgba(14,165,233,0.3)' }}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-            <path d="M3 18c0 0 4-4 9-4s9 4 9 4" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
-            <path d="M3 12c0 0 4-4 9-4s9 4 9 4" stroke="white" strokeWidth="2.5" strokeLinecap="round" opacity="0.5"/>
-          </svg>
-        </div>
+        <img src="/LOGO_PILAR.png" alt="PILAR" style={{ width: '36px', height: '36px', objectFit: 'contain', flexShrink: 0 }} />
         <span style={{ fontSize: '15px', fontWeight: '700', color: '#0c4a6e', letterSpacing: '-0.02em' }}>PILAR</span>
       </Link>
 

@@ -29,6 +29,7 @@ export class UsersService {
     return result;
   }
 
+  // PBI #27 - M. Haiqal Akbar - Statistik Kontribusi Relawan di Halaman Profil
   async getStats(userId: string) {
     const approved = await this.prisma.pendaftaran.findMany({
       where: { userId, status: 'APPROVED' },
@@ -42,6 +43,9 @@ export class UsersService {
       totalSampahKg: totalSampah,
     };
   }
+
+  // PBI #25 - M. Haiqal Akbar - Fungsionalitas Hapus Akun Relawan
+  // Tambahkan method deleteAccount(userId: string) di sini — hapus user beserta seluruh relasinya
 
   // --- TAMBAHAN BARU: Logika Ganti Password ---
   async changePassword(userId: string, passwordLama: string, passwordBaru: string) {
