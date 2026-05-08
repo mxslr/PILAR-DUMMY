@@ -16,7 +16,6 @@ export class SertifikatService {
   }
 
   // PBI #29 - Syifa Rizani - Generate dan Unduh Sertifikat PDF
-  // PBI #34 - Marshall Rasendria - Generate Sertifikat Otomatis Saat Pendaftaran Disetujui
   // Generate sertifikat untuk satu pendaftaran
   async generate(pendaftaranId: string, userId: string) {
     // 1. Cek pendaftaran ada dan milik user ini
@@ -33,7 +32,7 @@ export class SertifikatService {
 
     if (pendaftaran.userId !== userId)
       throw new BadRequestException('Tidak punya akses ke pendaftaran ini');
-
+  // PBI #34 - Marshall Rasendria - Generate Sertifikat Otomatis Saat Pendaftaran Disetujui
     // 2. Cek status pendaftaran harus APPROVED
     if (pendaftaran.status !== 'APPROVED')
       throw new BadRequestException(

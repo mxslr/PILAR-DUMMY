@@ -10,10 +10,10 @@ export class SertifikatController {
   constructor(private sertifikatService: SertifikatService) {}
 
   // PBI #29 - Syifa Rizani - Generate dan Unduh Sertifikat PDF
-  // PBI #34 - Marshall Rasendria - Generate Sertifikat Otomatis Saat Pendaftaran Disetujui
   // User generate sertifikat miliknya
   @UseGuards(JwtAuthGuard)
   @Post('generate/:pendaftaranId')
+    // PBI #34 - Marshall Rasendria - Generate Sertifikat Otomatis Saat Pendaftaran Disetujui
   generate(
     @Param('pendaftaranId') pendaftaranId: string,
     @Request() req,

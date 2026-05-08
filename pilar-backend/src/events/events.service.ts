@@ -67,7 +67,6 @@ export class EventsService {
   }
 
   // PBI #22 - Muhammad Faris Alfaqih - Statistik Sampah Terpilah Dashboard Admin
-  // PBI #40 - Naufal Athalino - Integrasi Data Monitoring ke Dashboard
   // Statistik dashboard
   async getStats() {
     const [totalEvent, totalRelawan, sampahData] = await Promise.all([
@@ -79,6 +78,8 @@ export class EventsService {
         _sum: { jumlahKg: true },
       }),
     ]);
+    
+  // PBI #40 - Naufal Athalino - Integrasi Data Monitoring ke Dashboard
     return {
       totalEvent,
       totalRelawan,

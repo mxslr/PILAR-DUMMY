@@ -25,7 +25,6 @@ export default function DashboardAdmin() {
     if (user && user.role !== 'ADMIN') router.push('/dashboard');
   }, [user]);
 
-  // PBI #22 - Muhammad Faris Alfaqih - Statistik Sampah Terpilah Dashboard Admin
   // PBI #40 - Naufal Athalino - Integrasi Data Monitoring ke Dashboard
   const fetchData = async () => {
     try {
@@ -47,6 +46,7 @@ export default function DashboardAdmin() {
     } catch { toast.error('Gagal menghapus event'); }
   };
 
+  // PBI #22 - Muhammad Faris Alfaqih - Statistik Sampah Terpilah Dashboard Admin
   const statusStyle = (s: string) => ({
     UPCOMING: { color: '#0369a1', bg: 'linear-gradient(135deg, #e0f2fe, #f0f9ff)', label: 'Mendatang' },
     ONGOING:  { color: '#059669', bg: 'linear-gradient(135deg, #dcfce7, #f0fdf4)', label: 'Berlangsung' },
@@ -89,7 +89,6 @@ export default function DashboardAdmin() {
       </div>
 
       {/* PBI #22 - Muhammad Faris Alfaqih - Statistik Sampah Terpilah Dashboard Admin */}
-      {/* PBI #40 - Naufal Athalino - Integrasi Data Monitoring ke Dashboard */}
       {/* Stat cards */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '16px', marginBottom: '32px' }}>
         {[
@@ -104,6 +103,7 @@ export default function DashboardAdmin() {
             animation: `_adminFade 0.5s ease ${0.1 * i}s both`,
             position: 'relative', overflow: 'hidden',
           }}>
+      {/* PBI #40 - Naufal Athalino - Integrasi Data Monitoring ke Dashboard */}
             <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '60px', height: '60px', borderRadius: '50%', background: s.gradient, opacity: 0.5, pointerEvents: 'none' }}/>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
               <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: s.gradient, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -116,9 +116,7 @@ export default function DashboardAdmin() {
         ))}
       </div>
 
-      {/* PBI #23 - Muhammad Faris Alfaqih - Ringkasan Laporan Kegiatan di Dashboard Admin */}
-      {/* PBI #24 - Muhammad Faris Alfaqih - Progress Kuota dan Status Event di Dashboard Admin */}
-      {/* Tabel Event */}
+      {/* PBI #23 - Muhammad Faris Alfaqih - Ringkasan Laporan Kegiatan di Dashboard Admin */}      {/* Tabel Event */}
       <div style={{ background: '#fff', borderRadius: '18px', border: '1px solid rgba(14,165,233,0.06)', overflow: 'hidden', boxShadow: '0 4px 16px rgba(0,0,0,0.02)', animation: '_adminFade 0.5s ease 0.3s both' }}>
         <div style={{ padding: '20px 22px', borderBottom: '1px solid rgba(14,165,233,0.06)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h2 style={{ fontSize: '13px', fontWeight: '700', color: '#0c4a6e', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Semua Event</h2>
@@ -143,6 +141,7 @@ export default function DashboardAdmin() {
               </tr>
             </thead>
             <tbody>
+      {/* PBI #24 - Muhammad Faris Alfaqih - Progress Kuota dan Status Event di Dashboard Admin */}
               {events.map((e: any) => {
                 const st = statusStyle(e.status);
                 return (
