@@ -25,7 +25,7 @@ export default function DashboardAdmin() {
     if (user && user.role !== 'ADMIN') router.push('/dashboard');
   }, [user]);
 
-  // PBI #40 - Naufal Athalino - Integrasi Data Monitoring ke Dashboard
+  // PBI #22 - Muhammad Faris Alfaqih - Statistik Sampah Terpilah Dashboard Admin
   const fetchData = async () => {
     try {
       const [stRes, evRes] = await Promise.all([
@@ -103,7 +103,6 @@ export default function DashboardAdmin() {
             animation: `_adminFade 0.5s ease ${0.1 * i}s both`,
             position: 'relative', overflow: 'hidden',
           }}>
-      {/* PBI #40 - Naufal Athalino - Integrasi Data Monitoring ke Dashboard */}
             <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '60px', height: '60px', borderRadius: '50%', background: s.gradient, opacity: 0.5, pointerEvents: 'none' }}/>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
               <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: s.gradient, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

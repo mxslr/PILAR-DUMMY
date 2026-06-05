@@ -33,6 +33,14 @@ export class EventsController {
     return this.eventsService.getStats();
   }
 
+  // PBI #40 - Naufal Athalino - Halaman Rekap Statistik Keseluruhan Program
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.ADMIN)
+  @Get('rekap')
+  getRekap() {
+    return this.eventsService.getRekap();
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.eventsService.findOne(id);
